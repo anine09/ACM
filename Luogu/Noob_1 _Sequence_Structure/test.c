@@ -1,9 +1,12 @@
 #include<stdio.h>
+
 int main(){
-    int A, B, C;
-    double D;
-    scanf("%d %d %d", &A, &B, &C);
-    D = A * 0.2 + B * 0.3 + C * 0.5;
-    printf("%lf", D);
+
+    int c1;
+    scanf("%d", &c1);
+    double answer;
+    answer = c1 + 'A' + 38.7856;
+    printf("% (1).1lf", answer);
+
     return 0;
 }
