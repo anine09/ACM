@@ -1,49 +1,41 @@
-
 #include <algorithm>
 #include <cstdio>
 #include <iostream>
 using namespace std;
 
 int n;
-int T[10000];
-int num[10000];
+int ans = 0;
+struct person
+{
+    int time;
+    int num;
+} water[1010];
+
+bool cmp(person x, person y)
+{
+    return x.time > y.time;
+}
 
 int main()
 {
     cin >> n;
     for (int i = 1; i <= n; i++)
     {
-        cin >> T[i];
-        num[i] = T[i];
+        scanf("%d", &water[i].time);
+        water->num = i;
     }
-    cout << endl;
-    cout << "-------------------------";
-    cout << endl;
-    sort(T, T + n+1);
-    for (int j = 1; j <= n; j++)
+    sort(water, water + n + 1, cmp);
+    for (int i = 0; i < n; i++)
     {
-        for (int m = 1; m <= n; m++)
-        {
-            if (num[j] == T[m])
-                cout << m << " ";
-        }
+
     }
-    cout << endl;
-    double ans = 0;
-    for (int k = 1; k <= n; k++)
-    {
-        ans += T[k];
-    }
-    printf("%.2lf", ans / n);
 
     return 0;
 }
 
-
-
 /*
-#include<cstdio>
 #include<algorithm>
+#include<cstdio>
 using namespace std;
 struct node
 {
