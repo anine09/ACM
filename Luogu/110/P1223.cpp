@@ -4,7 +4,7 @@
 using namespace std;
 
 int n;
-int ans = 0;
+double ans = 0;
 struct person
 {
     int time;
@@ -25,11 +25,12 @@ int main()
         water->num = i;
     }
     sort(water, water + n + 1, cmp);
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i <= n; i++)
     {
-
+        water[i].time += water[i - 1].time;
+        ans += water[i].time;
     }
-
+    printf("%.2lf", ans / n);
     return 0;
 }
 

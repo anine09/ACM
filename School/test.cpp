@@ -1,45 +1,19 @@
-#include<iostream>
-#include<cstdio>
-#include<cstring>
-#include<algorithm>
-#include<cmath>
-#include<vector>
+#include <cstdio>
 using namespace std;
 
-int n;
-vector<int> l;
-vector<int> r;
-vector<int> num;
-vector<int> ans;
+double a, b, c;
 
-int main(){
-    cin>>n;
-    for (int i = 0; i < n;i++){
-        cin >> l[i] >> r[i];
+int main()
+{
 
-    }
-    for (int i = 0; i < n;i++){
-        int k = 0;
-        for (l[i]; l[i] <= r[i];l[i]++){
-            num[k] = l[i];
-            k++;
-        }
-        int m = r[i] - l[i];
-        int times = 0;
-        while (m)
-        {
-            times = num[m] * num[m];
-            if(times>=l[i]&&times<=r[i]){
-                ans[i] += 1;
-            }
-            m--;
-        }
-        
-        
-    }
+    scanf("%lf %lf %lf", &a, &b, &c);
+    if (a<=0||b<=0||c<=0)
+        printf("Input Error");
+    else if (a + b > c && a + c > b && b + c > a)
+        printf("Yes");
 
-    for (int i = 0; i < n;i++){
-        cout << ans[i];
-    }
-        return 0;
+    
+    else
+        printf("No");
+    return 0;
 }
