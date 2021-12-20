@@ -28,5 +28,3 @@ printf("min = %d\n",min);
 printf("max = %d\n",max);
 return 0;
 }
-n0 n1 n2 n3
-1 2    3 4 
